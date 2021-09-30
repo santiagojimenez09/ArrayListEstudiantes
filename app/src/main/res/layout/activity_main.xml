@@ -149,6 +149,7 @@
             android:layout_width="195dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="Guardar"
             android:gravity="center"
             android:text="Guardar"
             android:textSize="25dp" />
@@ -158,6 +159,7 @@
             android:layout_width="wrap_content"
             android:layout_height="85dp"
             android:layout_weight="1"
+            android:onClick="Consultar"
             android:textSize="25dp"
             android:gravity="center"
             android:text="Consultar" />
@@ -179,18 +181,20 @@
 
         <Button
             android:id="@+id/bteliminar"
-            android:layout_width="wrap_content"
+            android:layout_width="188dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="25dp"
             android:gravity="center"
-            android:text="Eliminar" />
+            android:onClick="Eliminar"
+            android:text="Eliminar"
+            android:textSize="25dp" />
 
         <Button
             android:id="@+id/btcancelar"
             android:layout_width="wrap_content"
             android:layout_height="85dp"
             android:textSize="25dp"
+            android:onClick="Cancelar"
             android:gravity="center"
             android:layout_weight="1"
             android:text="Cancelar" />
