@@ -2,6 +2,7 @@ package com.example.arraylist_estudiantes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -58,7 +59,15 @@ public class MainActivity extends AppCompatActivity {
                 limpiar_datos();
                 sw=0;
             }else{
-                consultar_datos();
+                pos=0;
+                sw=0;
+                    while (pos<alestudiantes.size() && sw==0) {
+                        objestudiantes = alestudiantes.get(pos);
+                        if (objestudiantes.getCarnet().equals(carnet))
+                            sw = 1;
+                        else
+                            pos++;
+                    }
                 if (sw==0) {
                     objestudiantes = new ClsEstudiantes(carnet, nombre, carrera, semestre);
                     alestudiantes.add(objestudiantes);
@@ -104,6 +113,13 @@ public class MainActivity extends AppCompatActivity {
         jetcarrera.setText("");
         jetsemestre.setText("");
         jetcarnet.requestFocus();
+        sw=0;
+    }
+
+    public void Pasar(View view){
+        Intent intpasar=new Intent(this,MostrarActivity.class);
+        intpasar.putExtra("Listas",alestudiantes);
+        startActivity(intpasar);
     }
 
     private void consultar_datos(){

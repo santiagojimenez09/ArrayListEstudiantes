@@ -1,6 +1,8 @@
 package com.example.arraylist_estudiantes;
 
-public class ClsEstudiantes {
+import java.io.Serializable;
+
+public class ClsEstudiantes implements Serializable {
 
     private String carnet;
     private String nombre;
@@ -52,7 +54,7 @@ public class ClsEstudiantes {
 
     @Override
     public String toString() {
-        return "ClsEstudiantes{" +
+        return "Datos del estudiante " +
                 "carnet='" + carnet + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", carrera='" + carrera + '\'' +

@@ -217,6 +217,7 @@
             android:id="@+id/btpasar"
             android:textSize="25dp"
             android:gravity="center"
+            android:onClick="Pasar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Pasar" />
